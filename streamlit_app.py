@@ -1,11 +1,9 @@
 #=========================================================================================================================================================
-# Author: Luis E C Rocha  - luis.rocha@ugent.be - Ghent University, Belgium  - 26.09.2022
+# Author: Luis E C Rocha  - Ghent University, Belgium  - 26.09.2022
 #
 # Description: 	This file contains a simple implementation of the Random Walk model on a grid
 #              	1. first install streamlit using "pip install streamlit" 
-#       2. run the python code from the command prompt using "streamlit run week3_exercise2.py"  *streamlit does not work well with Jupyter notebook
-#       3. when you run streamlit, it will open a tab in your default browser with the streamlit application *it works as a webpage hosted at the following URL:  Local URL: http://localhost:8501
-#       3.1. therefore, you can either stop the application or refresh the webpage to "restart" the application 
+#               2. when you run streamlit, it will open a tab in your default browser with the streamlit application *it works as a webpage hosted at the following URL:  Local URL: http://localhost:8501
 #
 #=========================================================================================================================================================
 
@@ -210,10 +208,10 @@ st.title("Random Walk model")
 # Methods to interactively collect input variables
 
 N = st.sidebar.slider("Population Size", 5, 500, 100)
-prob_hop = st.sidebar.slider("Prob Hopping", 0.0, 1.0, 0.1)
+prob_hop = st.sidebar.slider("Prob Hopping", 0.0, 1.0, 0.5)
 boundary = st.sidebar.radio("Boundary Conditions", ('Periodic', 'Mirror', 'Absorbing'))
 no_iter = st.sidebar.number_input("Number of Iterations", 1)
-speed = st.sidebar.number_input("Speed Simulation", 0.0, 1.0, 1.0)
+speed = st.sidebar.number_input("Speed Simulation", 0.0, 1.0, 0.75)
 
 #--------------------------------------------------------------------------------------------------
 # Initialise the object   - Note that when one runs the code, the selected parameters will be passed here during the initialisation of the object via "self" method
